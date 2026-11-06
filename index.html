@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Monthsary Suamiku Sayang!❤️</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to bottom, #ffe4e1, #ffb6c1);
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            overflow-x: hidden;
+            text-align: center;
+            padding: 20px;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.85);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            max-width: 450px;
+            width: 100%;
+            z-index: 10;
+            backdrop-filter: blur(5px);
+        }
+        h1 {
+            color: #d63384;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        .foto-couple {
+            width: 200x;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #fff;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            margin-bottom: 20px;
+        }
+        .btn {
+            background-color: #d63384;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-size: 16px;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: 0.3s;
+            box-shadow: 0 4px 10px rgba(214, 51, 132, 0.3);
+        }
+        .btn:hover {
+            background-color: #b8236c;
+            transform: scale(1.05);
+        }
+        .pesan-rahasia {
+            display: none;
+            margin-top: 20px;
+            padding: 15px;
+            background: #fff0f5;
+            border-left: 5px solid #d63384;
+            border-radius: 5px;
+            font-style: italic;
+            animation: fadeIn 1s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        /* Kelopak Bunga Jatuh */
+        .petal {
+            position: absolute;
+            background-color: #ffb6c1;
+            border-radius: 150% 0 150% 150%;
+            opacity: 0.7;
+            animation: fall linear infinite;
+            z-index: 1;
+            pointer-events: none;
+        }
+        @keyframes fall {
+            0% { transform: translateY(-10px) rotate(0deg); top: -10px; }
+            100% { transform: translateY(100vh) rotate(360deg); top: 100vh; }
+        }
+    </style>
+</head>
+<body>
+
+  <meta charset="UTF-8">
+    <style>
+        /* Memberikan jarak langsung pada elemen audio */
+        audio {
+            display: block; /* Mengubah ke block agar margin bekerja dengan baik */
+            margin-bottom: 30px; /* Atur ketebalan jarak sesuai kebutuhan (misal: 30px) */
+            width: 100%; /* Menyesuaikan lebar jika diperlukan */
+        }
+
+        /* Elemen di bawahnya (frame/konten profil) */
+        .profile-container {
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Musik Latar (Ganti URL dengan link lagu favorit kalian) -->
+    <meta charset="UTF-8">
+    <title>Audio Autoplay HTML</title>
+</head>
+<body>
+
+    <h1>Rizky Febrian - Makna Cinta</h1>
+
+    <!-- Tambahkan muted agar autoplay tidak diblokir oleh browser -->
+    <audio controls autoplay loop>
+        <source src="MaknaCinta.mp3" type="audio/mpeg">
+        Browser Anda tidak mendukung elemen audio.
+    </audio>
+
+</body>
+</html>
+
+    <div class="container">
+        <!-- Ganti dengan URL foto kalian berdua -->
+        <img src="FotoKita.jpg" alt="Foto Kita" class="foto-couple">
+        
+        <h1>Happy 14th Monthsary!❤️</h1>
+        <p>Gak kerasa kita sudah melewati satu bulan lagi bersama. Terima kasih ya sudah selalu sabar, sayang, dan ada buat aku dalam kondisi apapun. *I love you more than words can say!* 🥰</p>
+        
+        <button class="btn" onclick="tampilkanPesan()">Klik untuk Pesan Rahasia 💌</button>
+        
+        <div class="pesan-rahasia" id="pesan">
+            "Harapan aku di mensive kali ini, semoga kita makin langgeng, makin dewasa nyelesaiin masalah, dan selalu sama-sama terus ya. Happy mensive, Sayangku! 🌸✨"
+        </div>
+    </div>
+
+    <script>
+        // Efek Pesan Muncul
+        function tampilkanPesan() {
+            var pesan = document.getElementById("pesan");
+            if (pesan.style.display === "block") {
+                pesan.style.display = "none";
+            } else {
+                pesan.style.display = "block";
+            }
+        }
+
+        // Efek Animasi Kelopak Bunga
+        function createPetal() {
+            const petal = document.createElement('div');
+            petal.classList.add('petal');
+            petal.style.left = Math.random() * window.innerWidth + 'px';
+            petal.style.size = Math.random() * 10 + 5 + 'px';
+            petal.style.width = petal.style.size;
+            petal.style.height = petal.style.size;
+            petal.style.animationDuration = Math.random() * 3 + 2 + 's';
+            document.body.appendChild(petal);
+            setTimeout(() => { petal.remove(); }, 5000);
+        }
+        setInterval(createPetal, 300);
+    </script>
+</>
+</html>
